@@ -17,8 +17,8 @@ app.use('/public', express.static(__dirname + '/public'));
 app.use(serveStatic(__dirname, {'index': ['home.html', 'about.html']}))
 app.use('/api',appRoutes);
 
-//http:localhost:8080/api/users
-mongoose.connect('mongodb://localhost:27017/tutorialmeanstack', { 
+//http:localhost:8080/api/users mongodb://admin:admin@ds111608.mlab.com:11608/tutorialmeanstack
+mongoose.connect('mongodb://admin:admin@ds111608.mlab.com:11608/tutorialmeanstack', { 
 	useMongoClient: true ,
 	function(err){
 if(err){
